@@ -10,6 +10,13 @@ import Containers from '../containers';
 class Router {
     constructor(navigator) {
         this.navigator = navigator;
+        for (let name in Containers) {
+            this[`to${name}`] = function (props) {
+                this.push(props, {
+                    component: Containers[name]
+                });
+            };
+        }
     }
 
 
@@ -24,13 +31,6 @@ class Router {
 
     pop() {
         this.navigator.pop();
-    }
-
-
-    toHome(props) {
-        this.push(props, {
-            component: Containers.Home
-        });
     }
 }
 

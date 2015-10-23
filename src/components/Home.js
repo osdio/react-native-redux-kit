@@ -25,6 +25,11 @@ class Home extends Component {
     }
 
 
+    _onAboutPress() {
+        this.props.router.toAbout();
+    }
+
+
     render() {
         return (
             <View style={styles.container}>
@@ -34,6 +39,14 @@ class Home extends Component {
                             {this.props.home.name}
                         </Text>
                     </TouchableOpacity>
+
+                    <TouchableOpacity onPress={this._onAboutPress.bind(this)}>
+                        <Text style={styles.text}>
+                            About
+                        </Text>
+                    </TouchableOpacity>
+
+
                 </View>
             </View>
         )
