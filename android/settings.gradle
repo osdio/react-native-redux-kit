@@ -1,0 +1,3 @@
+rootProject.name = 'bapp'
+
+include ':app'
