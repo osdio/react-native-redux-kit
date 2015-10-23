@@ -4,7 +4,7 @@ import React,{
 
 
 import SceneConfig from './SceneConfig';
-import Home from '../containers/Home';
+import Containers from '../containers';
 
 
 class Router {
@@ -25,12 +25,20 @@ class Router {
     pop() {
         this.navigator.pop();
     }
+
+
+    toHome(props) {
+        this.push(props, {
+            component: Containers.Home
+        });
+    }
 }
+
 
 Router.initialRoute = {
     name: 'home',
     index: 0,
-    component: Home
+    component: Containers.Home
 };
 
 
