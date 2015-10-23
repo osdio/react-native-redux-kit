@@ -1,4 +1,7 @@
-import React,{Navigator,Dimensions} from 'react-native';
+import React,{
+    Navigator,
+    Dimensions
+} from 'react-native';
 
 
 var { width, height } = Dimensions.get('window');
@@ -15,14 +18,14 @@ var fullPopGestureConfig = Object.assign({}, Navigator.SceneConfigs.FloatFromBot
 });
 
 
-exports.customFloatFromRight = Object.assign({}, baseConfig, {
+export const customFloatFromRight = Object.assign({}, baseConfig, {
     gestures: {
         pop: popGestureConfig
     }
 });
 
 
-exports.customFloatFromBottom = Object.assign({}, Navigator.SceneConfigs.FloatFromBottom, {
+export const customFloatFromBottom = Object.assign({}, Navigator.SceneConfigs.FloatFromBottom, {
     gestures: {
         pop: fullPopGestureConfig
     }
