@@ -1,4 +1,4 @@
-import connect from '../vendors/connect.js';
+import connect from '../store/connect.js';
 
 import * as Home from './Home';
 import * as About from './About';
