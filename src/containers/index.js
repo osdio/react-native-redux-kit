@@ -10,7 +10,11 @@ var Containers = {
 };
 
 Object.keys(Containers).forEach(function (key) {
-    Containers[key] = connect(Containers[key].mapStateToProps)(Containers[key].component);
+    Containers[key] = connect(
+        Containers[key].mapStateToProps,
+        Containers[key].mapDispatchToProps,
+        Containers[key].mergeProps
+    )(Containers[key].component);
 });
 
 export default Containers;
