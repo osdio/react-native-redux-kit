@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as actions from '../actions';
 
 export default function connect () {
-    var args = [...arguments];
+    let args = [...arguments];
     if (!args[1]) {
         args[1] = function (dispatch) {
             return bindActionCreators(actions, dispatch);
