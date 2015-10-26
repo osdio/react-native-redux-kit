@@ -6,4 +6,4 @@ export function mapStateToProps(state) {
     };
 }
 
-export var component = Home;
+export const component = Home;

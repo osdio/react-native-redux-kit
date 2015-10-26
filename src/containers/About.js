@@ -6,4 +6,4 @@ export function mapStateToProps(state) {
     };
 }
 
-export var component = About;
+export const component = About;

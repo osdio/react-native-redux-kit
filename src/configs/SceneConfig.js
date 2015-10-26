@@ -4,16 +4,16 @@ import React,{
 } from 'react-native';
 
 
-var { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 
-var baseConfig = Navigator.SceneConfigs.FloatFromRight;
-var popGestureConfig = Object.assign({}, baseConfig.gestures.pop, {
+const baseConfig = Navigator.SceneConfigs.FloatFromRight;
+const popGestureConfig = Object.assign({}, baseConfig.gestures.pop, {
     edgeHitWidth: width / 3
 });
 
 
-var fullPopGestureConfig = Object.assign({}, Navigator.SceneConfigs.FloatFromBottom.gestures.pop, {
+const fullPopGestureConfig = Object.assign({}, Navigator.SceneConfigs.FloatFromBottom.gestures.pop, {
     edgeHitWidth: width
 });
 
