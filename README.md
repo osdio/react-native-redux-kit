@@ -6,14 +6,12 @@
 
 ```
 git clone https://github.com/soliury/react-native-redux-kit.git
-
 ```
 
 Install the package:
 
 ```
 npm i
-
 ```
 
 This project use **gulp** as a dev control tool. So make sure you have install the **gulp**.
@@ -28,7 +26,6 @@ If you want to change the `port` of bundle url, you can change the `port` in `gu
 
 ```
 port = 8080
-
 ```
 
 ### gulp package
