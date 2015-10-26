@@ -1,10 +1,16 @@
-import Home from './Home';
-import Navigation from './Navigation';
-import About from './About';
+import connect from '../vendors/connect.js';
+
+import * as Home from './Home';
+import * as About from './About';
 
 
-export default  Containers = {
-    Navigation,
+var Containers = {
     Home,
-    About,
+    About
 };
+
+Object.keys(Containers).forEach(function (key) {
+    Containers[key] = connect(Containers[key].mapStateToProps)(Containers[key].component);
+});
+
+export default Containers;
