@@ -4,7 +4,7 @@ import About from './About';
 
 
 export default  Containers = {
-    Home,
     Navigation,
-    About
-}
+    Home,
+    About,
+};

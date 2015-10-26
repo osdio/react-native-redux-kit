@@ -1,4 +1,4 @@
-import * as actions from '../actions/home';
+import * as actions from '../actions';
 
 const initState = {
     name: 'home'
