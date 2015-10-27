@@ -9,24 +9,31 @@ import React,{
 
 
 class Home extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.count = 0;
     }
 
 
-    componentDidFocus() {
+    componentDidFocus () {
         console.log('componentDidFocus');
     }
 
 
-    _onPress() {
+    _onPress () {
         this.props.changeName(`home${++this.count}`);
     }
 
 
-    _onAboutPress() {
+    _onAboutPress () {
         this.props.router.toAbout();
+    }
+
+    _onMyActivityIndicatorIOSPress () {
+        this.props.router.toMyActivityIndicatorIOS();
+    }
+    _onMyDatePickerIOSPress () {
+        this.props.router.toMyDatePickerIOS();
     }
 
 
@@ -46,7 +53,17 @@ class Home extends Component {
                         </Text>
                     </TouchableOpacity>
 
+                    <TouchableOpacity onPress={this._onMyActivityIndicatorIOSPress.bind(this)}>
+                        <Text style={styles.text}>
+                            MyActivityIndicatorIOS
+                        </Text>
+                    </TouchableOpacity>
 
+                    <TouchableOpacity onPress={this._onMyDatePickerIOSPress.bind(this)}>
+                        <Text style={styles.text}>
+                            MyDatePickerIOS
+                        </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         )

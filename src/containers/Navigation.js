@@ -1,4 +1,4 @@
-import React,{
+import React, {
     Component,
     Navigator,
     PropTypes

@@ -1,5 +1,5 @@
 'use strict';
-import {connect as _connect} from '../../node_modules/react-redux/native';
+import {connect as _connect} from 'react-redux/native';
 import {bindActionCreators} from 'redux';
 import * as actions from '../actions';
 

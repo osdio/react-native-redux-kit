@@ -2,11 +2,14 @@ import connect from '../store/connect.js';
 
 import * as Home from './Home';
 import * as About from './About';
-
+import * as MyActivityIndicatorIOS from './MyActivityIndicatorIOS';
+import * as MyDatePickerIOS from './MyDatePickerIOS';
 
 var Containers = {
     Home,
-    About
+    About,
+    MyActivityIndicatorIOS,
+    MyDatePickerIOS
 };
 
 Object.keys(Containers).forEach(function (key) {
