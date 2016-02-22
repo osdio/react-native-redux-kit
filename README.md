@@ -1,6 +1,6 @@
 # react-native-redux-kit
 
-> A start kit for **react-native + redux** project.
+> A start kit for **react-native + redux** project. This project is abstract from [noder](https://github.com/soliury/noder-react-native).
 
 # How to start it?
 
