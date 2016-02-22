@@ -1,16 +1,33 @@
-import {createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
-import reducer from '../reducers';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import promiseMiddleware from './promiseMiddleware';
+import asyncActionCallbackMiddleware from './asyncActionCallbackMiddleware';
+import utilsMiddleware from './utilsMiddleware';
+import logger from 'redux-logger';
+import reducers from '../reducers';
 
 
-const createStoreWithMiddleware = applyMiddleware(
-    thunk
-)(createStore);
+var middlewares = [
+	thunkMiddleware,
+	promiseMiddleware,
+	asyncActionCallbackMiddleware,
+	utilsMiddleware
+];
 
 
-function configureStore(initialState) {
-    return createStoreWithMiddleware(reducer, initialState);
+if (__DEV__) {
+	middlewares.push(logger());
 }
 
 
-export default configureStore;
+export default function configureStore(initialState) {
+	return applyMiddleware(
+		...middlewares
+	)(createStore)(reducers, initialState);
+}
+
+
+
+
+
+

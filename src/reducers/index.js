@@ -1,10 +1,6 @@
-import {combineReducers} from 'redux';
-import home from './home';
+import { combineReducers } from 'redux';
+import utils from './utils';
 
-
-const rootReducer = combineReducers({
-    home
+export default combineReducers({
+	utils
 });
-
-
-export default rootReducer;
